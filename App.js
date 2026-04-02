@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import FeedScreen from './src/screens/FeedScreen';
+import CreatePostScreen from './src/screens/CreatePostScreen';
 import ProfileScreen from './src/screens/ProfileScreen';
 import { MOCK_POSTS } from './src/data/mockData';
 
@@ -36,6 +37,11 @@ export default function App() {
           name="HomeTab"
           component={HomeStackNavigator}
           options={{ tabBarLabel: 'Home' }}
+        />
+        <Tab.Screen
+          name="CreatePostTab"
+          component={CreatePostScreen}
+          options={{ tabBarLabel: 'Create Post' }}
         />
         <Tab.Screen
           name="ProfileTab"
